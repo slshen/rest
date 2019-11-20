@@ -109,9 +109,9 @@ The main function that does the heavy lifting (and external entry point) is `API
 
 All PRs require passing tests before the PR will be reviewed.
 
-All test files are in [`rest-test.go`](https://github.com/sendgrid/rest/blob/master/rest_test.go).
+All test files are in [`rest_test.go`](https://github.com/sendgrid/rest/blob/master/rest_test.go).
 
-For the purposes of contributing to this repo, please update the [`rest-test.go`](https://github.com/sendgrid/rest/blob/master/rest_test.go) file with unit tests as you modify the code.
+For the purposes of contributing to this repo, please update the [`rest_test.go`](https://github.com/sendgrid/rest/blob/master/rest_test.go) file with unit tests as you modify the code.
 
 Run the test:
 

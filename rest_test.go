@@ -322,6 +322,12 @@ func TestRepoFiles(t *testing.T) {
 
 func TestLicenseYear(t *testing.T) {
 	t.Parallel()
+	if _, err := os.Stat(".git"); os.IsNotExist(err) {
+		// Skip running this check if this module is not checked out from github.
+		// Permits "go test all" to pass if this module hasn't been updated
+		// in the current year.
+		t.Skip()
+	}
 	dat, err := ioutil.ReadFile("LICENSE.txt")
 
 	currentYear := time.Now().Year()
